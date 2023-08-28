@@ -23,3 +23,7 @@ def create_commits(start_date, end_date):
         commit_message = generate_commit_message()
         subprocess.run(["git", "commit", "--date", current_date.strftime("%Y-%m-%d %H:%M:%S"), "-m", commit_message])
         current_date += timedelta(days=1)
+if __name__ == "__main__":
+    base_date = datetime(2023, 1, 1)  # Adjust the start date as needed
+    end_date = datetime(2023, 12, 31)  # Adjust the end date as needed
+    create_commits(base_date, end_date)
