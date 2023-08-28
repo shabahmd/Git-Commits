@@ -11,3 +11,7 @@ def generate_commit_message():
         "Improved performance",
     ]
     return random.choice(messages)
+    
+def generate_commit_date(base_date, days_offset):
+    offset = timedelta(days=days_offset)
+    return base_date + offset
